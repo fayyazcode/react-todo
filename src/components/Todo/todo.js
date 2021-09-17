@@ -1,12 +1,12 @@
 import React from "react";
 const Todo=({todo,text,todos,setTodos})=>{
-    console.log(todo)
+
     const deleteHandler=()=>{
         setTodos(todos.filter(el => el.id !== todo.id))
     }
     return(
 <div className="todo">
-    <li className="todo-item" >{text}</li>
+    <li className="todo-item" key={todo.id}>{text}</li>
     <button className="complete-btn">
         <i className="fas fa-edit"></i>
     </button>
